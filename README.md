@@ -1,17 +1,5 @@
 # [Enhanced YOLOv10-N: A lightweight YOLOv10 with Efficient Multi-Scale Cross 1D Convolutions]
 
-
-
-
-<p align="center">
-  <img src="figures/latency.svg" width=48%>
-  <img src="figures/params.svg" width=48%> <br>
-  Comparisons with others in terms of latency-accuracy (left) and size-accuracy (right) trade-offs.
-</p>
-
-[Enhanced YOLOv10-N: A lightweight YOLOv10 with Efficient Multi-Scale Cross 1D Convolutions].\
-Wei Du,Qiang Guo\
-
   <summary>
   <font size="+1">Abstract</font>
   </summary>
@@ -44,21 +32,6 @@ yolo detect train data=coco.yaml model=yolov10n/s/m/b/l/x.yaml epochs=500 batch=
 ## Prediction
 ```
 yolo predict model=yolov10n/s/m/b/l/x.pt
-```
-
-## Export
-```
-# End-to-End ONNX
-yolo export model=yolov10n/s/m/b/l/x.pt format=onnx opset=13 simplify
-# Predict with ONNX
-yolo predict model=yolov10n/s/m/b/l/x.onnx
-
-# End-to-End TensorRT
-yolo export model=yolov10n/s/m/b/l/x.pt format=engine half=True simplify opset=13 workspace=16
-# Or
-trtexec --onnx=yolov10n/s/m/b/l/x.onnx --saveEngine=yolov10n/s/m/b/l/x.engine --fp16
-# Predict with TensorRT
-yolo predict model=yolov10n/s/m/b/l/x.engine
 ```
 
 ## Acknowledgement
