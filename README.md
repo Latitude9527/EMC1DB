@@ -35,8 +35,10 @@ yolo predict model=yolov10n/s/m/b/l/x.pt
 ```
 
 ## Acknowledgement
+The code base is built with ultralytics and RT-DETR.
+Thanks for the great implementations!
 
-This work was supported by the Key R$\&$D Program of Shandong Province, China (2024TSGC0109)
+This work was supported by the Key R&D Program of Shandong Province, China (2024TSGC0109)
 
 ## Citation
 
