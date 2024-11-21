@@ -1,11 +1,10 @@
-# [Enhanced YOLOv10-N: A lightweight YOLOv10 with Efficient Multi-Scale Cross 1D Convolutions]
+# Enhanced YOLOv10-N: A lightweight YOLOv10 with Efficient Multi-Scale Cross 1D Convolutions
 
   <summary>
   <font size="+1">Abstract</font>
   </summary>
 Convolutional neural networks (CNNs) are known for their ability to learn and recognize various objects and patterns, which makes them be powerful feature extractors. While 2D convolutions used in CNNs are effective for extracting features from images, their large convolutional kernels, such as  $7\times7$ kernel, often result in more parameters. This makes them unsuitable for small object detection models deployed on devices with limited computational resources. However, simply using 1D convolution with fewer parameters in the model of object detection will lead to a performance degradation. To address this issue, we propose an efficient multi-scale cross 1D convolutional block (EMC1DB), which has stronger feature extraction capabilities, thereby improving the performance of small object detection models. Additionally, in order to address the problem of inaccurate bounding box localization in object detection, we introduce a modified bounding box regression loss function named Anchored IoU loss (AIoU),  which improves sensitivity to precise bounding box matching. Combining the above two plug-and-play EMC1DB and AIoU in YOLOv10-N enables it to achieve higher performance than the baseline on PASCLA VOC 2012 and MS COCO 2017 datasets. In addition, experimental results show that the proposed method also performs well in YOLOv7-T.
 </details>
-
 
 
 ## Installation
@@ -35,7 +34,7 @@ yolo predict model=yolov10n/s/m/b/l/x.pt
 ```
 
 ## Acknowledgement
-The code base is built with ultralytics and RT-DETR.
+The code base is built with ultralytics， RT-DETR and YOLOv10.
 Thanks for the great implementations!
 
 This work was supported by the Key R&D Program of Shandong Province, China (2024TSGC0109)
